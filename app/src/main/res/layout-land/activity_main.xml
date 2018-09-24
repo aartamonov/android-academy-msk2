@@ -7,17 +7,7 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="Hello World!"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--app:layout_constraintRight_toRightOf="parent"-->
-    <!--app:layout_constraintTop_toTopOf="parent" />-->
-
     <!--Photo-->
-
     <ImageView
         android:id="@+id/photo_view"
         android:layout_width="match_parent"
@@ -37,6 +27,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--Key Info-->
             <android.support.v7.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/key_section_height"
@@ -97,6 +88,7 @@
 
             </android.support.v7.widget.GridLayout>
 
+            <!--Description block-->
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
@@ -128,6 +120,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/description_back" />
 
+            <!--Feedback block-->
             <EditText
                 android:id="@+id/editText"
                 android:layout_width="match_parent"
@@ -150,6 +143,7 @@
                 android:layout_weight="1"
                 android:text="@string/feedback_btn_text" />
 
+            <!-- Social block-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -159,8 +153,6 @@
 
                 android:layout_weight="1"
                 android:orientation="horizontal">
-                <!--app:orientation="horizontal"-->
-                <!--app:columnCount="2"-->
                 <ImageView
                     android:id="@+id/habr_logo"
                     android:layout_width="@dimen/logo_width"
@@ -180,12 +172,4 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <!--Key Info-->
-
-    <!--Description block-->
-
-    <!--Feedback block-->
-
-    <!-- Social block-->
 </LinearLayout>
