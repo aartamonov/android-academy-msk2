@@ -85,18 +85,34 @@
 
     </android.support.v7.widget.GridLayout>
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/description_back"
+        android:layout_marginStart="@dimen/common_start_margin"
+        android:layout_marginEnd="@dimen/common_end_margin"
+        android:layout_weight="1" />
+
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/description_view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/description_section_height"
         android:layout_marginEnd="@dimen/common_end_margin"
         android:layout_marginStart="@dimen/common_start_margin"
-
         android:layout_weight="1"
-
         android:scrollbars="vertical"
         android:text="@string/description_text"
         android:textSize="@dimen/text_size" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/description_back"
+        android:layout_marginStart="@dimen/common_start_margin"
+        android:layout_marginEnd="@dimen/common_end_margin"
+        android:layout_weight="1" />
 
     <EditText
         android:id="@+id/editText"
@@ -133,7 +149,7 @@
             android:id="@+id/habr_logo"
             android:layout_width="@dimen/logo_width"
             android:layout_height="@dimen/logo_height"
-            android:layout_margin="@dimen/key_margin"
+            android:layout_marginEnd="@dimen/key_margin"
             android:contentDescription="@string/habr_desc"
             app:srcCompat="@drawable/habr" />
 
@@ -141,7 +157,7 @@
             android:id="@+id/vk_logo"
             android:layout_width="@dimen/logo_width"
             android:layout_height="@dimen/logo_height"
-            android:layout_margin="@dimen/key_margin"
+            android:layout_marginStart="@dimen/key_margin"
             android:contentDescription="@string/vk_desc"
             app:srcCompat="@drawable/vk" />
     </LinearLayout>
