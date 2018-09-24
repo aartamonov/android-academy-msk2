@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="photo_height">150dp</dimen>
+    <dimen name="key_section_height">96dp</dimen>
+    <dimen name="key_section_start_padding">46dp</dimen>
+    <dimen name="key_section_another_padding">12dp</dimen>
+    <dimen name="logo_width">28dp</dimen>
+    <dimen name="logo_height">28dp</dimen>
+    <dimen name="key_margin">4dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="description_section_height">30dp</dimen>
+    <dimen name="common_start_margin">50dp</dimen>
+    <dimen name="common_end_margin">16dp</dimen>
+    <dimen name="feedback_field_height">30dp</dimen>
+    <dimen name="send_btn_height">10dp</dimen>
+</resources>

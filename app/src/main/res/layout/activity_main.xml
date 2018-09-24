@@ -16,130 +16,141 @@
     <!--app:layout_constraintRight_toRightOf="parent"-->
     <!--app:layout_constraintTop_toTopOf="parent" />-->
 
+    <!--Photo-->
     <ImageView
         android:id="@+id/photo_view"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/photo_height"
         android:layout_weight="1"
         android:contentDescription="@string/my_photo"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <android.support.v7.widget.GridLayout
         android:layout_width="match_parent"
-        android:layout_height="96dp"
-        android:layout_weight="1"
-        android:paddingStart="46dp"
-        android:paddingTop="12dp"
-        android:paddingEnd="12dp"
-        android:paddingBottom="12dp"
-        app:columnCount="2"
-        app:rowCount="3"
+        android:layout_height="@dimen/key_section_height"
         android:layout_gravity="center"
-        >
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/key_section_another_padding"
+        android:paddingEnd="@dimen/key_section_another_padding"
+        android:paddingStart="@dimen/key_section_start_padding"
+        android:paddingTop="@dimen/key_section_another_padding"
+        app:columnCount="2"
+        app:rowCount="3">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:id="@+id/aviator_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:contentDescription="@string/aviator_text"
+            app:srcCompat="@drawable/aviator" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/aviator_text"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:text="Aviator"
-            android:layout_margin="4dp"
-            android:textSize="16sp"/>
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:text="@string/aviator_text"
+            android:textSize="@dimen/text_size" />
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:id="@+id/dev_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:contentDescription="@string/dev_text"
+            app:srcCompat="@drawable/developer" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/dev_text"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            android:text="Web-developer" />
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:text="@string/dev_text" />
 
         <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:id="@+id/student_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:contentDescription="@string/student_text"
+            app:srcCompat="@drawable/android_student" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/student_text"
             android:layout_width="match_parent"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            android:text="Android student" />
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:text="@string/student_text" />
 
     </android.support.v7.widget.GridLayout>
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/description_section_height"
+        android:layout_marginEnd="@dimen/common_end_margin"
+        android:layout_marginStart="@dimen/common_start_margin"
+
         android:layout_weight="1"
-        android:text="Description"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="16sp"/>
+
+        android:scrollbars="vertical"
+        android:text="@string/description_text"
+        android:textSize="@dimen/text_size" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="@dimen/feedback_field_height"
+        android:layout_marginEnd="@dimen/common_end_margin"
+        android:layout_marginStart="@dimen/common_start_margin"
+
         android:layout_weight="1"
-        android:ems="10"
+        android:hint="@string/feedback_hint"
         android:inputType="textPersonName"
-        android:text="Feedback"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="16sp"/>
+        android:textSize="@dimen/text_size" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_gravity="right"
-        android:layout_height="10dp"
+        android:layout_height="@dimen/send_btn_height"
+        android:layout_gravity="end"
         android:layout_weight="1"
-        android:text="Send message" />
+        android:text="@string/feedback_btn_text" />
 
-    <android.support.v7.widget.GridLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="16dp"
-        app:orientation="horizontal"
-        app:columnCount="2"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/common_end_margin"
+        android:layout_marginStart="@dimen/common_start_margin"
+
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <!--app:orientation="horizontal"-->
+        <!--app:columnCount="2"-->
+        <ImageView
+            android:id="@+id/habr_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:contentDescription="@string/habr_desc"
+            app:srcCompat="@drawable/habr" />
 
         <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@mipmap/ic_launcher"
-            />
+            android:id="@+id/vk_logo"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height"
+            android:layout_margin="@dimen/key_margin"
+            android:contentDescription="@string/vk_desc"
+            app:srcCompat="@drawable/vk" />
+    </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_margin="4dp"
-            app:srcCompat="@mipmap/ic_launcher" />
-    </android.support.v7.widget.GridLayout>
+    <!--Key Info-->
 
-    <!--TODO: Key Info-->
-    <!--TODO: Description-->
-    <!--TODO: Feedback-->
-    <!--TODO: Social-->
+    <!--Description block-->
 
+    <!--Feedback block-->
+
+    <!-- Social block-->
 </LinearLayout>
