@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Артамонов Александр - Визитка</string>
+    <string name="my_photo">Мое фото</string>
+    <string name="description_text">Окончил МАИ по специальности АСОиУ в 2008году. Работаю Веб-разработчиком.</string>
+    <string name="feedback_hint">Введите сообщение...</string>
+    <string name="feedback_btn_text">Отправить сообщение</string>
+    <string name="student_text">Android-студент</string>
+    <string name="dev_text">Веб-разработчик</string>
+    <string name="aviator_text">Авиатор</string>
+    <string name="vk_desc">Вк</string>
+    <string name="error_no_browser_app">Не найден браузер</string>
+    <string name="disclaimer_text">(c) 2018 Артамонов Александр</string>
+    <string name="error_no_email_app">Не найдено приложение для отправки почты</string>
+    <string name="email_subject">Привет, Доргой Друг!</string>
+    <string name="warn_empty_message">Пустое сообщение! Введите сообщение и повторите попытку</string>
+</resources>
