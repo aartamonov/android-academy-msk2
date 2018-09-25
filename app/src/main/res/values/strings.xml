@@ -9,4 +9,9 @@
     <string name="aviator_text">Aviator</string>
     <string name="vk_desc">VK</string>
     <string name="habr_desc">Habr</string>
+    <string name="error_no_browser_app">No WEB browser app were found.</string>
+    <string name="disclaimer_text">(c) 2018 Aleksandr Artamonov</string>
+    <string name="error_no_email_app">No Email apps were found.</string>
+    <string name="email_subject">Hello, Dier Friend!</string>
+    <string name="warn_empty_message">Message is empty! Enter message and retry.</string>
 </resources>
