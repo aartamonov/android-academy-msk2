@@ -12,6 +12,6 @@
     <string name="error_no_browser_app">Не найден браузер</string>
     <string name="disclaimer_text">(c) 2018 Артамонов Александр</string>
     <string name="error_no_email_app">Не найдено приложение для отправки почты</string>
-    <string name="email_subject">Привет, Доргой Друг!</string>
+    <string name="email_subject">Привет, Дорогой Друг!</string>
     <string name="warn_empty_message">Пустое сообщение! Введите сообщение и повторите попытку</string>
 </resources>

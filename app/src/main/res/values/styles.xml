@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name = "LogoImgStyle" >
+        <item name = "android:layout_width">@dimen/logo_width</item>
+        <item name = "android:layout_height">@dimen/logo_height</item>
+        <item name = "android:layout_margin">@dimen/key_margin</item>
+    </style>
+
+    <style name = "KeyItemDescStyle" >
+        <item name = "android:layout_width">match_parent</item>
+        <item name = "android:layout_height">@dimen/logo_height</item>
+        <item name = "android:layout_margin">@dimen/key_margin</item>
+        <item name = "android:textSize">@dimen/text_size</item>
+    </style>
+
 </resources>

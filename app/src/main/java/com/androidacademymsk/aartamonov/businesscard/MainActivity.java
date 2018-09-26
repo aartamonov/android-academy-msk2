@@ -2,14 +2,19 @@ package com.androidacademymsk.aartamonov.businesscard;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.support.design.widget.Snackbar.make;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,47 +23,62 @@ public class MainActivity extends AppCompatActivity {
     private final static String[] EMAIL_ADDRESS = {"andr.academy.msk@gmail.com"};
     private final static String MAILTO = "mailto:";
 
+    View rootView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ImageView habrImg = findViewById(R.id.habr_logo);
-        final ImageView vkImg = findViewById(R.id.vk_logo);
-        final Button sendBtn = findViewById(R.id.send_btn);
-        final EditText messageEdit = findViewById(R.id.message_text);
+        init();
+    }
+
+    private void init() {
+
+        initHabr();
+        initVk();
+        initSendEmail();
         final TextView disclaimer = findViewById(R.id.disclaimer_view);
         disclaimer.setText(R.string.disclaimer_text);
+        rootView = disclaimer.getRootView();
+    }
 
+    private void initHabr() {
+        final ImageView habrImg = findViewById(R.id.habr_logo);
         habrImg.setClickable(true);
-        vkImg.setClickable(true);
-
         habrImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openWebBrowser(HABR_URL);
             }
         });
+    }
 
+    private void initVk() {
+        final ImageView vkImg = findViewById(R.id.vk_logo);
+        vkImg.setClickable(true);
         vkImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openWebBrowser(VK_URL);
             }
         });
+    }
 
+    private void initSendEmail() {
+        final EditText messageEdit = findViewById(R.id.message_text);
+        final Button sendBtn = findViewById(R.id.send_btn);
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String mess = messageEdit.getText().toString();
                 if (mess == null || mess.isEmpty()) {
-                    viewToast(getString(R.string.warn_empty_message));
+                    showMessage(getString(R.string.warn_empty_message));
                     return;
                 }
                 sendEmail(mess);
             }
         });
-
     }
 
     private void openWebBrowser(String resUrl) {
@@ -67,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         if (webIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(webIntent);
         } else {
-            viewToast(getString(R.string.error_no_browser_app));
+            showMessage(getString(R.string.error_no_browser_app));
         }
     }
 
@@ -80,11 +100,12 @@ public class MainActivity extends AppCompatActivity {
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         } else {
-            viewToast(getString(R.string.error_no_email_app));
+            showMessage(getString(R.string.error_no_email_app));
         }
     }
 
-    private void viewToast(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    private void showMessage(String message) {
+//        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+         make(rootView, message, Snackbar.LENGTH_LONG).show();
     }
 }
