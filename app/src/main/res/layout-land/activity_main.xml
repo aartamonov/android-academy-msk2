@@ -4,18 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <!--Photo-->
     <ImageView
         android:id="@+id/photo_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/photo_height"
+        android:layout_width="@dimen/photo_width"
+        android:layout_height="match_parent"
+
         android:contentDescription="@string/my_photo"
+
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/avatar" />
     <!--android:scaleType="centerCrop"-->
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,14 +27,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <!--Key Info-->
             <android.support.v7.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/key_section_height"
                 android:layout_gravity="center"
-
                 android:paddingBottom="@dimen/key_section_standart_padding"
                 android:paddingEnd="@dimen/key_section_standart_padding"
                 android:paddingStart="@dimen/key_section_start_padding"
@@ -41,36 +43,48 @@
 
                 <ImageView
                     android:id="@+id/aviator_logo"
-                    style="@style/LogoImgStyle"
+                    android:layout_width="@dimen/logo_width"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:contentDescription="@string/aviator_text"
                     app:srcCompat="@drawable/aviator" />
 
                 <TextView
                     android:id="@+id/aviator_text"
-                    style="@style/KeyItemDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:text="@string/aviator_text"
-                     />
+                    android:textSize="@dimen/text_size" />
 
                 <ImageView
                     android:id="@+id/dev_logo"
-                    style="@style/LogoImgStyle"
+                    android:layout_width="@dimen/logo_width"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:contentDescription="@string/dev_text"
                     app:srcCompat="@drawable/developer" />
 
                 <TextView
                     android:id="@+id/dev_text"
-                    style="@style/KeyItemDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:text="@string/dev_text" />
 
                 <ImageView
                     android:id="@+id/student_logo"
-                    style="@style/LogoImgStyle"
+                    android:layout_width="@dimen/logo_width"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:contentDescription="@string/student_text"
                     app:srcCompat="@drawable/android_student" />
 
                 <TextView
                     android:id="@+id/student_text"
-                    style="@style/KeyItemDescStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_margin="@dimen/key_margin"
                     android:text="@string/student_text" />
 
             </android.support.v7.widget.GridLayout>
@@ -79,10 +93,10 @@
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/line_height"
+                android:layout_height="3dp"
+                android:layout_marginBottom="@dimen/key_margin"
                 android:layout_marginEnd="@dimen/common_end_margin"
                 android:layout_marginStart="@dimen/common_start_margin"
-                android:layout_marginBottom="@dimen/key_margin"
                 android:background="@drawable/description_back" />
 
             <TextView
@@ -121,8 +135,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/send_btn_height"
                 android:layout_gravity="end"
-                android:layout_marginStart="@dimen/common_start_margin"
                 android:layout_marginEnd="@dimen/common_end_margin"
+                android:layout_marginStart="@dimen/common_start_margin"
                 android:text="@string/feedback_btn_text" />
 
             <!-- Social block-->
@@ -136,13 +150,17 @@
                 android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/habr_logo"
-                    style="@style/LogoImgStyle"
+                    android:layout_width="@dimen/logo_width"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_marginEnd="@dimen/key_margin"
                     android:contentDescription="@string/habr_desc"
                     app:srcCompat="@drawable/habr" />
 
                 <ImageView
                     android:id="@+id/vk_logo"
-                    style="@style/LogoImgStyle"
+                    android:layout_width="@dimen/logo_width"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_marginStart="@dimen/key_margin"
                     android:contentDescription="@string/vk_desc"
                     app:srcCompat="@drawable/vk" />
             </LinearLayout>
@@ -151,11 +169,12 @@
                 android:id="@+id/disclaimer_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/common_start_margin"
                 android:layout_marginEnd="@dimen/common_end_margin"
+                android:layout_marginStart="@dimen/common_start_margin"
                 android:textSize="@dimen/text_size"
                 android:textAlignment="center"
                 />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -1,4 +1,17 @@
 <resources>
-    <string name="app_name">Business Card</string>
+    <string name="app_name">Aleksandr Artamonov - Business Card</string>
     <string name="my_photo">My photo</string>
+    <string name="description_text">Graduated with the specialization of Informatics from the Moscow Aviation University in 2008. Working as Web-developer.</string>
+    <string name="feedback_hint">Enter a message...</string>
+    <string name="feedback_btn_text">Send message</string>
+    <string name="student_text">Android student</string>
+    <string name="dev_text">Web-developer</string>
+    <string name="aviator_text">Aviator</string>
+    <string name="vk_desc">VK</string>
+    <string name="habr_desc" translatable="false">Habr</string>
+    <string name="error_no_browser_app">No WEB browser app were found.</string>
+    <string name="disclaimer_text">(c) 2018 Aleksandr Artamonov</string>
+    <string name="error_no_email_app">No Email apps were found.</string>
+    <string name="email_subject">Hello, Dier Friend!</string>
+    <string name="warn_empty_message">Message is empty! Enter message and retry.</string>
 </resources>
