@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aleksandr Artamonov - Business Card</string>
+    <string name="app_name">News ribbon</string>
     <string name="my_photo">My photo</string>
     <string name="description_text">Graduated with the specialization of Informatics from the Moscow Aviation University in 2008. Working as Web-developer.</string>
     <string name="feedback_hint">Enter a message...</string>

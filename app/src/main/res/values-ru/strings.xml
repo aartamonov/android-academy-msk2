@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Артамонов Александр - Визитка</string>
+    <string name="app_name">Лента новостей</string>
     <string name="my_photo">Мое фото</string>
     <string name="description_text">Окончил МАИ по специальности АСОиУ в 2008году. Работаю Веб-разработчиком.</string>
     <string name="feedback_hint">Введите сообщение...</string>
