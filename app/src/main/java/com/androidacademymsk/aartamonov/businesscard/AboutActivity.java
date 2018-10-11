@@ -101,6 +101,7 @@ public class AboutActivity extends AppCompatActivity {
     private void showMessage(String message) {
 //        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
         View mainView = findViewById(android.R.id.content);
-         make(mainView, message, Snackbar.LENGTH_LONG).show();
+//        make(mainView, message, Snackbar.LENGTH_LONG).show();
+        Utils.showMessage(mainView, message);
     }
 }
