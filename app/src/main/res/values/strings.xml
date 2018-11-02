@@ -15,4 +15,5 @@
     <string name="email_subject">Hello, Dier Friend!</string>
     <string name="warn_empty_message">Message is empty! Enter message and retry.</string>
     <string name="menu_action_switch">Switch</string>
+    <string name="news_image_desc">News image</string>
 </resources>

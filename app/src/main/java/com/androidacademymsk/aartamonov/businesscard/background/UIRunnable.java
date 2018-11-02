@@ -45,8 +45,8 @@ public class UIRunnable implements Runnable {
     synchronized void initActivity() {
         activity = activityRef.get();
         if (activity != null) {
-            ProgressBar progressBar = activity.findViewById(R.id.progressBar);
-            progressBar.setVisibility(View.GONE);
+//            ProgressBar progressBar = activity.findViewById(R.id.progressBar);
+//            progressBar.setVisibility(View.GONE);
 
             RecyclerView rv = activity.findViewById(R.id.news_list);
             rv.setHasFixedSize(true);

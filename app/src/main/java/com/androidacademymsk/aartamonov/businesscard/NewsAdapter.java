@@ -29,8 +29,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private final Context context;
     @Nullable
     private final OnItemClickListener clickListener;
-//    @NonNull
-//    private final RequestManager imageLoader;
+    @NonNull
+    private final RequestManager imageLoader;
 
     public NewsAdapter(@NonNull Context context, @NonNull List<NewsItem> newsList,
                                 @Nullable OnItemClickListener clickListener) {
@@ -39,11 +39,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         this.context = context;
         this.clickListener = clickListener;
 
-//        RequestOptions imageOption = new RequestOptions()
-//                .placeholder(R.drawable.avatar_placeholder)
-//                .fallback(R.drawable.avatar_placeholder)
-//                .centerCrop();
-//        this.imageLoader = Glide.with(context).applyDefaultRequestOptions(imageOption);
+        RequestOptions imageOption = new RequestOptions()
+                .placeholder(R.drawable.android_student)
+                .fallback(R.drawable.android_student)
+                .centerCrop();
+        this.imageLoader = Glide.with(context).applyDefaultRequestOptions(imageOption);
     }
 
     @NonNull
@@ -98,8 +98,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
         void bind(NewsItem newsItem) {
 
-//            imageLoader.load(actor.getAvatarUrl()).into(avatarView);
-            Glide.with(context).load(newsItem.getImageUrl()).into(imgView);
+            imageLoader.load(newsItem.getImageUrl()).into(imgView);
+//            Glide.with(context).load(newsItem.getImageUrl()).into(imgView);
             categoryView.setText(newsItem.getCategory().getName());
             captionView.setText(newsItem.getTitle());
             contentView.setText(newsItem.getFullText());

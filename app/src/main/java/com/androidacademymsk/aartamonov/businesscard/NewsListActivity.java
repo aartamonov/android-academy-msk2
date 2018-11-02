@@ -42,6 +42,7 @@ public class NewsListActivity extends AppCompatActivity {
         public void onItemClick(NewsItem newsItem) {
             String clickMess = newsItem.getTitle();
             Utils.showMessage(findViewById(android.R.id.content), clickMess);
+            NewsDetailsActivity.startActivity(this, newsItem);
         }
     };
 
@@ -50,14 +51,14 @@ public class NewsListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_list);
 
-//        rv = findViewById(R.id.news_list);
-//        rv.setHasFixedSize(true);
+        rv = findViewById(R.id.news_list);
+        rv.setHasFixedSize(true);
 
-//        rvLayoutManager = new LinearLayoutManager(this);
-//        rv.setLayoutManager(rvLayoutManager);
-//
-//        rvAdapter = new NewsAdapter(this, DataUtils.generateNews(), clickListener);
-//        rv.setAdapter(rvAdapter);
+        rvLayoutManager = new LinearLayoutManager(this);
+        rv.setLayoutManager(rvLayoutManager);
+
+        rvAdapter = new NewsAdapter(this, DataUtils.generateNews(), clickListener);
+        rv.setAdapter(rvAdapter);
     }
 
     @Override
@@ -77,51 +78,52 @@ public class NewsListActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
 
-        ProgressBar pb = findViewById(R.id.progressBar);
-        pb.setVisibility(View.VISIBLE);
-
+//        ProgressBar pb = findViewById(R.id.progressBar);
+//        pb.setVisibility(View.VISIBLE);
+//
 //        executor = Executors.newSingleThreadExecutor();
 //        executor.execute(new BgRunnable(this));
-        final long timeToWait = 2000L;
-        disposable = Observable.fromCallable(new Callable<Object>() {
-            @Override
-            public Object call() {
-                return Utils.loadInTime(timeToWait);
-            }
-        })
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Object>() {
-                    @Override
-                    public void accept(Object o) {
-                        updateUI();
-                    }
-                });
 
-    }
+//        final long timeToWait = 2000L;
+//        disposable = Observable.fromCallable(new Callable<Object>() {
+//            @Override
+//            public Object call() {
+//                return Utils.loadInTime(timeToWait);
+//            }
+//        })
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Consumer<Object>() {
+//                    @Override
+//                    public void accept(Object o) {
+//                        updateUI();
+//                    }
+//                });
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        executor = null;
-        if (disposable != null) {
-            disposable.dispose();
-            disposable = null;
-        }
-    }
+//    }
+
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        executor = null;
+//        if (disposable != null) {
+//            disposable.dispose();
+//            disposable = null;
+//        }
+//    }
 
 //    private void rxOnStart() {
 //        disposibal =
 //    }
 
-    private void updateUI() {
-        Log.i("NewsActivity", "updateUI");
+//    private void updateUI() {
+//        Log.i("NewsActivity", "updateUI");
 //        if (textView != null) {
 //
 //        }
-    }
+//    }
 }

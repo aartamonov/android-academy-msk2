@@ -15,4 +15,5 @@
     <string name="email_subject">Привет, Дорогой Друг!</string>
     <string name="warn_empty_message">Пустое сообщение! Введите сообщение и повторите попытку</string>
     <string name="menu_action_switch">Switch</string>
+    <string name="news_image_desc">News image</string>
 </resources>
