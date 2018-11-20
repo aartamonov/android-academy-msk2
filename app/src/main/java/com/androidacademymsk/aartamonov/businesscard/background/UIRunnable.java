@@ -22,7 +22,7 @@ public class UIRunnable implements Runnable {
     private final Long waitTime;
     private Activity activity;
 
-    private final NewsAdapter.OnItemClickListener clickListener = new NewsAdapter.OnItemClickListener() {
+    private final NewsAdapter.OnItemClickListener clickListener = null; /*new NewsAdapter.OnItemClickListener() {
 
         @Override
         public void onItemClick(NewsItem newsItem) {
@@ -31,7 +31,7 @@ public class UIRunnable implements Runnable {
             Utils.showMessage(activity.findViewById(android.R.id.content), clickMess);
         }
     };
-
+*/
     public UIRunnable(@NonNull Activity activity, Long waitTime) {
         this.activityRef = new WeakReference<>(activity);
         this.waitTime = waitTime;
