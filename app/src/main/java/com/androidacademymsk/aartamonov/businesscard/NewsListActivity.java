@@ -1,5 +1,6 @@
 package com.androidacademymsk.aartamonov.businesscard;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -21,9 +22,13 @@ public class NewsListActivity extends AppCompatActivity {
 
     private final NewsAdapter.OnItemClickListener clickListener = new NewsAdapter.OnItemClickListener() {
         @Override
-        public void onItemClick(NewsItem newsItem) {
+        public void onItemClick(Activity activity, NewsItem newsItem) {
             String clickMess = newsItem.getTitle();
             Utils.showMessage(findViewById(android.R.id.content), clickMess);
+<<<<<<< Updated upstream
+=======
+            NewsDetailsActivity.startActivity(activity, newsItem);
+>>>>>>> Stashed changes
         }
     };
 

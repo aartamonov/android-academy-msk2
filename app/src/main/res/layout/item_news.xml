@@ -26,6 +26,7 @@
                 tools:text="@tools:sample/lorem/random"
                 android:maxLines="1"
                 android:lines="1"
+                app:layout_constraintTop_toTopOf = "parent"
                 app:layout_constraintBottom_toTopOf="@id/news_caption"
                 app:layout_constraintStart_toStartOf="parent"
                 />
@@ -35,6 +36,7 @@
                 android:layout_height="25dp"
                 tools:text="Caption"
                 android:maxLines="1"
+                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/news_category"
                 app:layout_constraintEnd_toStartOf="@id/news_img"
                 app:layout_constraintStart_toStartOf="parent"
@@ -63,6 +65,7 @@
                 app:layout_constraintTop_toBottomOf="@id/news_content"
                 app:layout_constraintEnd_toStartOf="@id/news_img"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 />
 
             <ImageView
@@ -71,12 +74,18 @@
                 android:layout_height="125dp"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars"
+                android:layout_margin="2dp"
                 app:layout_constraintTop_toBottomOf="@id/news_category"
                 app:layout_constraintLeft_toRightOf="@id/news_content"
                 app:layout_constraintBottom_toTopOf="@id/news_date"
                 app:layout_constraintStart_toEndOf="@id/news_content"
                 app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< Updated upstream
                 android:visibility="gone"
+=======
+                android:contentDescription="@string/news_image_desc"
+                android:visibility="visible"
+>>>>>>> Stashed changes
                 tools:visibility="visible"
                 />
         </android.support.constraint.ConstraintLayout>

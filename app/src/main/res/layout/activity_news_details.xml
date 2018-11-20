@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailsActivity"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/news_caption_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/news_image_view"
+        app:layout_constraintBottom_toTopOf="@id/news_date_view"
+        tools:text = "@tools:sample/lorem"
+        />
+
+    <TextView
+        android:id="@+id/news_date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/news_caption_view"
+        app:layout_constraintBottom_toTopOf="@id/scroll_news_content"
+        android:paddingBottom="4dp"
+        tools:text = "21:21 20.11.2018" />
+
+    <ImageView
+        android:id="@+id/news_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:foregroundGravity="center"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:contentDescription="@string/news_image_desc"
+        app:layout_constraintBottom_toTopOf="@id/news_caption_view"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll_news_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_date_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/news_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:text="@tools:sample/lorem/random" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

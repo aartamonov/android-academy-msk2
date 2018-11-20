@@ -1,5 +1,6 @@
 package com.androidacademymsk.aartamonov.businesscard;
 
+        import android.app.Activity;
         import android.content.Context;
         import android.support.annotation.NonNull;
         import android.support.annotation.Nullable;
@@ -63,7 +64,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public interface OnItemClickListener {
-        void onItemClick(NewsItem newsItem);
+        void onItemClick(Activity activity, NewsItem newsItem);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -71,6 +72,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         private final TextView categoryView;
         private final TextView captionView;
         private final TextView contentView;
+        private final TextView dateView;
 
         ViewHolder(@NonNull View itemView, @Nullable OnItemClickListener listener) {
             super(itemView);
@@ -86,7 +88,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
                 public void onClick(View view) {
                     int position = getAdapterPosition();
                     if (listener1 != null && position != RecyclerView.NO_POSITION) {
-                        listener1.onItemClick(newsList.get(position));
+                        listener1.onItemClick((Activity)view.getContext(), newsList.get(position));
                     }
                 }
             });
@@ -94,15 +96,23 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             categoryView = itemView.findViewById(R.id.news_category);
             captionView = itemView.findViewById(R.id.news_caption);
             contentView = itemView.findViewById(R.id.news_content);
+            dateView = itemView.findViewById(R.id.news_date);
         }
 
         void bind(NewsItem newsItem) {
 
+<<<<<<< Updated upstream
 //            imageLoader.load(actor.getAvatarUrl()).into(avatarView);
             Glide.with(context).load(newsItem.getImageUrl()).into(imgView);
             categoryView.setText(newsItem.getCategory().getName());
+=======
+            imageLoader.load(newsItem.getImageUrl()).into(imgView);
+//            Glide.with(context).load(newsItem.getImageUrl()).into(imgView);
+            categoryView.setText(newsItem.getCategory().getName().toUpperCase());
+>>>>>>> Stashed changes
             captionView.setText(newsItem.getTitle());
             contentView.setText(newsItem.getFullText());
+            dateView.setText(Utils.dateFormat(newsItem.getPublishDate()));
 
 //            nameView.setText(actor.getName());
 //            oscarView.setVisibility(actor.hasOscar() ? View.VISIBLE : View.GONE);
